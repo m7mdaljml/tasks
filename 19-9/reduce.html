@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Reduce return single Value
+
+        // 1 : Summation
+        let arr = [10, 20, 30, 40];
+        let add = arr.reduce(function (acc, curr, index) {
+            return acc + curr;
+        }, 200);
+        console.log(add);
+
+
+        // 2 : Find large number
+        let numbers = [10, 50, 60, 80, 90, 100, 50, 60, 30];
+        let larger = numbers.reduce(function (acc, curr) {
+            return acc > curr ? acc : curr;
+        });
+        console.log(larger);
+
+
+        // 3 : filter with reduce
+        let char = ["Mo", "@", "ha", "@", "mm", "@", "ed"];
+        let name = char.filter(function (item) {
+            return !item.startsWith("@");
+        }).reduce(function (acc, curr) {
+            return `${acc}${curr}`;
+        });
+        console.log(name);
+
+        // 4 : Sum even & odd numbers
+        let nums = [12, 3, 8, 5, 10, 1, 5, 2];
+        let odd = 0;
+        let even = 0;
+        nums.reduce(function (acc, curr) {
+            if (curr % 2 != 0) {
+                odd += 1;
+            }
+            else {
+                even += 1;
+            }
+        },0);
+        console.log(`Odd Count is ${odd} and Even Count is ${even}`);
+
+
+
+    </script>
+</body>
+
+</html>

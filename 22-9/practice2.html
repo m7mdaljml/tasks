@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const users = [
+            {
+                id: 1,
+                name: "Alice",
+                email: "alice@example.com",
+                age: 28
+            },
+            {
+                id: 2,
+                name: "Bob",
+                email: "bob@example.com",
+                age: 34
+            },
+            {
+                id: 3,
+                name: "Charlie",
+                email: "charlie@example.com",
+                age: 25
+            }
+        ];
+        const comments = [
+            {
+                userId: 1,
+                comment: "This is a great post!",
+                date: "2024-09-21"
+            },
+            {
+                userId: 1,
+                comment: "Thanks for sharing!",
+                date: "2024-09-22"
+            },
+            {
+                userId: 2,
+                comment: "I found this really helpful.",
+                date: "2024-09-23"
+            },
+            {
+                userId: 3,
+                comment: "Interesting perspective!",
+                date: "2024-09-24"
+            }
+        ];
+
+
+        // what is the Alice user id 
+
+        function FindId(users, name) {
+            let obj = users.find(user => user.name === name)
+            return obj ? obj.id : "No User found";
+        }
+
+        // return the commebt of user tha his id is 3
+
+        function Find_Comm(users, comments, id) {
+            let obj = users.find(user => user.id === id);
+            let comment = comments.find(comment => comment.userId === obj.id);
+            return comment ? comment.comment : "There is no comment for this user";
+        }
+
+        // find the user that commented with "Thanks for sharing!"
+        function FindUser(users, comments, text) {
+            let obj = comments.find(comment => comment.comment === text);
+            let user = users.find(user => user.id === obj.userId);
+            return user ? user.name : "there is no user commented like this";
+        }
+
+        console.log(FindId(users, "Alice"));
+        console.log(Find_Comm(users, comments, 2));
+        console.log(FindUser(users, comments, "Thanks for sharing!"))
+
+    </script>
+</body>
+</html>

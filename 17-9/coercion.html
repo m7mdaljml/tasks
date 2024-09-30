@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coercion</title>
+</head>
+<body>
+    <script>
+        let str = "10";
+        let num = 5;
+        let bool = true;
+
+        console.log(str + num); // ** Concat
+        console.log(str - num); // default process
+        console.log(str * num); // default process
+        console.log(str / num); // default process
+        console.log(bool + str); // ** Concat
+        console.log(bool - str); // default process
+        console.log(bool * str); // default process
+        console.log(bool / str); // default process
+        console.log(bool + num); // default process
+        console.log(bool - num); // default process
+        console.log(bool * num); // default process
+        console.log(bool / num); // default process
+    </script>
+</body>
+</html>

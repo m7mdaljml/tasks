@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loop</title>
+    <style>
+        .container {
+            display:flex;
+            width: 100%;
+            justify-content: center;
+        }
+        .palyer{
+            width: 30%;
+            padding: 50px;
+            justify-content: space-around;
+        }
+        span{
+            padding: 50px;
+            margin-top: 10px;
+        }
+        .player > img {
+            width:100px;
+            padding: 50px;
+        }
+        h2{
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="players">
+        <h2 style="text-align: center;">players</h2>
+       <div class="container">
+        <div v-for="(player,id) in players" :key="id" class="player">
+            <span>{{player.name}}</span><br>
+            <img :src="player.img" alt=""><br>
+            <span>{{player.position}}</span><br>
+            <span>{{player.foot}}</span><br>
+        </div>
+       </div>
+       <span style="font-size: larger;text-align: center;"> this age from instance 1 :{{age}}</span>
+    </div>
+    <hr>
+    <div id="friends">
+        <div class="container">
+            <h2 style="text-align: center;">friends :</h2>
+            <h2 v-for="(friend,id) in friends" :key="id">
+                <span>{{friend.name}}</span>
+            </h2>
+        </div>
+        <button @click="increaseAge()">Increase age from instance 2 </button>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="multiple.js"></script>
+</body>
+</html>

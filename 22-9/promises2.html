@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*const myPromise = new Promise((resolve,reject)=>{
+            let connect = true
+            if(connect){
+                resolve("Success")
+            }
+            else{
+                reject("Failed")
+            }
+        })
+
+        console.log(myPromise)
+
+        myPromise.then(
+            (resolve)=>console.log(`reslove ${resolve}`),
+            (reject)=>console.log(`reject ${reject}`)
+        )*/
+        /*
+        const myPromise = new Promise((resolve, reject) => {
+            let nums = [1, 2, 3, 4]
+            if (nums.length === 4) {
+                resolve(nums)
+            } else {
+                reject(new Error("Numbers length is not 4"))
+            }
+        });
+
+        myPromise
+        .then((nums) => {
+                return nums.slice(0, 2)
+            })
+            .then((nums) => {
+                return nums.slice(0, 1)
+            })
+            .then((nums) => {
+
+                console.log(nums)
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+            .finally(
+                console.log("gg")
+            )
+        */
+
+
+        const FirstPromise = new Promise((res, rej) => {
+            setTimeout(() => {
+                res("Im the first")
+            }, 3000)
+        })
+        const SecondPromise = new Promise((res, rej) => {
+            setTimeout(() => {
+                res("Im the second")
+            }, 2000)
+        })
+        const ThirdPromise = new Promise((res, rej) => {
+            setTimeout(() => {
+                res("Im the third")
+            }, 1000)
+        })
+
+        //Promise.all([FirstPromise, SecondPromise, ThirdPromise]).then(
+        //    (resolve) => console.log(resolve),
+        //    (reject) => console.log(`Rejected : ${reject}`)
+        //)
+        // OUTPUT : [Im the first,Im the second,Im the third]    
+
+        //Promise.allSettled([FirstPromise, SecondPromise, ThirdPromise]).then(
+        //    (resolve) => console.log(resolve),
+        //    (reject) => console.log(`Rejected : ${reject}`)
+        //)
+        // return array of object every promise return array with his data (status,value)
+
+
+        //Promise.race([FirstPromise, SecondPromise, ThirdPromise]).then(
+        //    (resolve) => console.log(resolve),
+        //    (reject) => console.log(`Rejected : ${reject}`)
+        //)
+        // OUTPUT : Im the third // return the faster in this race
+
+
+    </script>
+</body>
+
+</html>

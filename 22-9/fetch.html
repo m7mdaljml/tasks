@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .emails{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <ul class="names"></ul>
+    </ul>
+    <div class="emails" id="emails">
+    
+    <script>
+        // Java Script has one Call Stack , so we should use Async programming and promises
+        /*
+        console.log("First");
+        window.setInterval(() => console.log("second"), 2000);
+        console.log("Third");
+        */
+
+        let url = 'https://jsonplaceholder.typicode.com/users'
+
+        /*function FetchApi(url) {
+            fetch(url)
+                .then(function (response) {
+                    console.log(response.json())
+                })
+                .catch(function (err) {
+                    console.log(err)
+                })
+        }*/
+
+        async function FetchApi(url) {
+            try {
+                let response = await fetch(url)
+                let json = await response.json()
+                return json
+            } catch (err) {
+                console.error(err)
+            } finally {
+                //console.log ("Promises")
+            }
+        }
+
+        function get_names(text) {
+            text.forEach(person => {
+                let lis = `<li onclick='show()'>${person.name}</li>`;
+                document.querySelector(".names").insertAdjacentHTML('beforeend', lis);
+            });
+        }
+
+        function getemail(name, text) {
+            // Find the person by name and access their email
+            let person = text.find(person => person.name === name);
+            if (person) {
+                let ul = `<ul><li>${person.email}</li></ul>`;
+                document.querySelector(".emails").insertAdjacentHTML('beforeend', ul);
+            }
+        }
+        function show(){
+            document.getElementById('emails').style.display = 'block';
+
+        }
+
+        FetchApi(url)
+        .then(json => {
+            var text = json
+            //console.log(text)
+            //function FindName(text){
+            //    let person = text.find(person => person.address.zipcode == "23505-1337")
+            //    return person.name
+            //}
+            get_names(text)
+            getemail("Clementine Bauch",text)
+
+            //console.log(FindName(text))
+        })
+        //console.log("Hi")
+
+
+    </script>
+</body>
+</html>

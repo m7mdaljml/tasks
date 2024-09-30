@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computed</title>
+    <style>
+        .red{
+            background-color: red;
+        }
+        .yellow{
+            background-color: yellow;
+            color: black;
+        }
+        .green{
+            background-color: green;
+        }
+        .black{
+            background-color: black;
+            color: white;
+        }
+        .white{
+            background-color: white;
+            color: black;
+        }
+        .blue{
+            background-color: blue;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div :class="title" :style="`font-size: ${font}px ;`">
+            <p>TTEESSTT</p>
+            <p>TTEESSTT</p>
+            <p>TTEESSTT</p>
+            <p>TTEESSTT</p>
+        </div>
+        <input v-model="title" type="text" name="color" id="color">
+        <input v-model="font" type="number" name="font" id="font">
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="dynamic.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      /*const arr = [
+        ["a", "b"],
+        ["c", "d"],
+        ["e", "f"],
+        ["g", "h"],
+        ["i", "j"],
+      ];
+
+      let obj = "";
+      function convert(arr){
+        obj += "{";
+     arr.forEach((item)=>{
+            obj+= item[0]+":\'"+item[1]+"\',";
+        });
+        obj+="}";
+        return obj;
+      }
+      let obj2 = convert(arr);
+      console.log(obj2);*/
+/*
+      const arr = [
+        ["a", "b"],
+        ["c", "d"],
+        ["e", "f"],
+        ["g", "h"],
+        ["i", "j"],
+      ];
+      function convert(arr){
+       return arr.reduce((acc,curr)=>{
+        acc[curr[0]] = curr[1];
+        return acc
+       },{})
+      }
+
+      console.log(convert(arr));
+      */
+/*
+      const arr = [
+        ["a", "b"],
+        ["c", "d"],
+        ["e", "f"],
+        ["g", "h"],
+        ["i", "j"],
+      ];
+
+      function convert(arr){
+        let obj = {}
+        arr.forEach(item=>{
+            obj[item[0]] = item[1]
+        });
+        return obj
+      }
+      console.log(convert(arr))
+      */
+      const arr = [
+        ["a", "b"],
+        ["c", "d"],
+        ["e", "f"],
+        ["g", "h"],
+        ["i", "j"],
+      ]
+
+      function convert(arr){
+        let obj = {}
+        for(let i = 0;i<arr.length;i++){
+          obj[arr[i][0]] = arr[i][1];
+        }
+        return obj
+      }
+      console.log(convert(arr))
+      
+    </script>
+  </body>
+</html>

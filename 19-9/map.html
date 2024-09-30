@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Map return new Array
+
+        // 1 : make array has default array and all items +2
+        let arr = [10, 20, 30, 40, 50];
+        let newArr = []
+        let newItem = arr.map(item => item + 2);
+        newArr.push(newItem);
+
+        console.log(newArr);
+
+        // 2 : make small capital and make capital small 
+        let char = ["M", "O", "n", "G", "i"];
+        let newChar = char.map(function (item) {
+            return item == item.toLowerCase() ? item.toUpperCase() : item.toLowerCase();
+        }).join("");
+        console.log(newChar);
+
+        // 3 : invert numbers from negative to positive and from positive to negative
+        let nums = [-100,500,-60,-30,-6,50];
+
+        let newNum = [];
+        let item = nums.map(function(item){
+            newNum.push(item*-1);
+        });
+        console.log(newNum);
+
+
+    </script>
+</body>
+
+</html>

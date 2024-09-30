@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(255, 255, 255);
+    padding-bottom:20px;
+}
+nav{
+    display:flex;
+    z-index:100;
+}
+.nav{
+    width: 100%;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    height: 50px;
+    box-shadow: 3px 4px 5px #04a0d8;
+}
+.nav > li{
+    text-align: center;
+    width: 75px;
+    float: left;
+    height: 50px;
+    display: inline;
+    padding: 10px;
+    color: black;
+    background-color: #04a0d8;
+    cursor: pointer;
+}
+li:hover{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+.logo{
+    justify-content: flex-end;
+    float: right;
+    height: 45px;
+    margin-right: 20px;
+    padding: 2px;
+}
+.container{
+    margin-top: 20px;
+    width:98%;
+    background-color: #049fd87c;
+    z-index: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+}
+.container > .post-card{
+    display: inline-block;
+width:calc(25% - 10px);
+height: 400px;
+background-color: rgba(255, 255, 255, 0.6);
+box-shadow: 10px 10px 10px #f49c04bd;
+margin-top:20px;
+margin: 3px;
+border-radius: 10% 90% 8% 92% / 90% 9% 91% 10% ;
+}
+.post-card > img{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width:50%;
+    z-index: 2;
+    border-radius: 79% 21% 81% 19% / 24% 66% 34% 76%;
+}
+.post-content{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 250px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: clip;
+    font-size: larger;
+
+}
+.comment > li{
+    text-decoration: none;
+    list-style-type: none;
+    margin: 20px;
+    display: block;
+    font-size: smaller;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: clip;
+    font-size: larger;
+    width:80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.comment > li:hover{
+    background-color: #f49c04bd;
+}
+.add_comm{
+    width:250px;
+    margin-left: auto;
+    margin-right: auto;
+    display:flex;
+    height: 35px;
+    border-radius: 15px;
+    padding: 3px;
+    border-color: #f49c04;
+    background-color: #04a0d8;
+    color: white;
+    border-width: 3px;
+}
+input::placeholder{
+    color: white;
+    text-align: center;
+}
+input:focus{
+    text-align: center;
+}

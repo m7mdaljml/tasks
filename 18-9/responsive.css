@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(117, 111, 111);
+}
+ul{
+    list-style-type: none;
+    overflow: hidden;
+    background-color: black;
+    height: 50px;
+}
+li{
+    text-align: center;
+    width: 75px;
+    float: left;
+    height: 50px;
+    display: inline;
+    padding: 10px;
+    color: black;
+    background-color: gray;
+}
+li:hover{
+    background-color: rgb(27, 117, 206);
+    color: white;
+    font-weight: bold;
+}
+img{
+    float: right;
+    height: 50px;
+}
+button{
+    display: none;
+}
+
+@media screen and (max-width :475px) {
+    body{
+        background-color: rgba(128, 128, 128, 0.355);
+    }
+    ul {
+        height: auto; /* Allow height to adjust for vertical layout */
+    }
+    li{
+        width:100%;
+        overflow: hidden;
+        float:none;
+        display: block;
+    }
+    img{
+        display: none;
+    }
+}
+

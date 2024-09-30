@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const people = [
+            { id: 1, name: "John Doe", age: 25, gender: "Male", email: "john.doe@example.com", city: "New York", Salary:3000 },
+            { id: 2, name: "Jane Smith", age: 30, gender: "Female", email: "jane.smith@example.com", city: "Los Angeles", Salary:5000},
+            { id: 3, name: "Alex Johnson", age: 22, gender: "Male", email: "alex.johnson@example.com", city: "Chicago", Salary:6000 },
+            { id: 4, name: "Emily Davis", age: 27, gender: "Female", email: "emily.davis@example.com", city: "Houston", Salary:3500 },
+            { id: 5, name: "Michael Brown", age: 35, gender: "Male", email: "michael.brown@example.com", city: "Phoenix", Salary:3000 },
+            { id: 6, name: "Sarah Miller", age: 28, gender: "Female", email: "sarah.miller@example.com", city: "Philadelphia", Salary:2500 },
+            { id: 7, name: "David Wilson", age: 40, gender: "Male", email: "david.wilson@example.com", city: "San Antonio", Salary:9000 },
+            { id: 8, name: "Sophia Moore", age: 19, gender: "Female", email: "sophia.moore@example.com", city: "San Diego", Salary:8000 },
+            { id: 9, name: "Chris Taylor", age: 33, gender: "Male", email: "chris.taylor@example.com", city: "Dallas", Salary:3000 },
+            { id: 10, name: "Olivia Anderson", age: 24, gender: "Female", email: "olivia.anderson@example.com", city: "San Jose", Salary:7000 },
+            { id: 11, name: "Liam Martinez", age: 21, gender: "Male", email: "liam.martinez@example.com", city: "Austin", Salary:6500 },
+            { id: 12, name: "Ava Thomas", age: 26, gender: "Female", email: "ava.thomas@example.com", city: "Jacksonville", Salary:6200 },
+            { id: 13, name: "Noah Jackson", age: 31, gender: "Male", email: "noah.jackson@example.com", city: "San Francisco", Salary:5000 },
+            { id: 14, name: "Isabella White", age: 29, gender: "Female", email: "isabella.white@example.com", city: "Columbus", Salary:4700 },
+            { id: 15, name: "William Harris", age: 23, gender: "Male", email: "william.harris@example.com", city: "Fort Worth", Salary:6000 },
+            { id: 16, name: "Mia Clark", age: 32, gender: "Female", email: "mia.clark@example.com", city: "Charlotte", Salary:3500 },
+            { id: 17, name: "James Rodriguez", age: 37, gender: "Male", email: "james.rodriguez@example.com", city: "Indianapolis", Salary:4200 },
+            { id: 18, name: "Amelia Lewis", age: 20, gender: "Female", email: "amelia.lewis@example.com", city: "Seattle", Salary:6200 },
+            { id: 19, name: "Elijah Walker", age: 34, gender: "Male", email: "elijah.walker@example.com", city: "Denver", Salary: 3200},
+            { id: 20, name: "Charlotte Hall", age: 27, gender: "Female", email: "charlotte.hall@example.com", city: "Washington", Salary:8400 }
+        ];
+
+    // age average
+    function AgeAvg(people){
+        let AgeSum = 0;
+        people.forEach(person => {
+            AgeSum += person.age;
+        });
+        return AgeSum/people.length;
+    }
+
+    // Male Count
+    function MaleCount(people){
+        let MCount = 0;
+        people.forEach(person=>{
+            if(person.gender === "Male"){
+                MCount+=1;
+            }
+        });
+        return MCount;
+    }
+
+    // Female Count
+    function FemaleCount(people){
+        let FCount = 0;
+        people.forEach(person=>{
+            if(person.gender === "Female"){
+                FCount+=1;
+            }
+        });
+        return FCount;
+    }
+
+    // person Lives in San Francisco
+    function findCity(people,city){
+        let person = people.find(person=>{
+           return person.city === city;
+        });
+        return person ? person.name : "No Person lives in this City";
+    }
+
+    // return arr of obj with name and email just
+    function name_email(people){
+        return people.reduce((acc,curr)=>{
+            acc[curr.name] = curr.email;
+            return acc;
+        },{});
+    }
+
+    // return arr of name that has salary above or Equal 5000 $
+    function BigSalary(people){
+        let arr = [];
+        people.forEach(person=>{
+            if(person.Salary >= 5000){
+                arr.push(person.name);
+            }
+        });
+        return arr;
+    }
+
+
+
+
+    console.log(AgeAvg(people));
+    console.log(MaleCount(people));
+    console.log(FemaleCount(people));
+    console.log(findCity(people,"Chicago"));
+    console.log(name_email(people));
+    console.log(BigSalary(people));
+    
+
+    </script>
+</body>
+
+</html>

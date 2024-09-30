@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // String Methods :
+
+        let name = "Mohammad Aljamal";
+        name.length(); // length of string
+        name.at(2); // the char at index 2
+        name.slice(2,3); // slice(start,end)
+        name.substr(2,4); // substr(start,length)
+        name.substring(1,5); // substring(start,end)
+        name.toUpperCase(); // make string upper case
+        name.toLowerCase(); // make string lower case
+        name.concat("Mohammad"); // joins two or more strings
+        name.trim(); // method removes whitespace from both sides of a string
+        name.trimStart(); // method removes whitespace from start of a string
+        name.trimEnd(); // method removes whitespace from end of a string
+        name.padStart("0",20); // pads a string with another string (multiple times) until it reaches a given length.
+        name.padEnd(20,"0"); 
+        name.repeat(4); // returns a string with a number of copies of a string.
+        name.replace("Mohammad","Jawad"); // replaces a specified value with another value in a string
+        name.replaceAll("Mohammad","Jawad"); // replace all
+
+
+        // Array Methods : 
+        let arr = [1,2,3,4,5];
+        arr.length(); // length of array
+        arr.toString(); // make an array as a string
+        arr.at(2); // return item in index 2 
+        arr.join(" * "); // joins all array elements into a string
+        arr.pop(); // removes the last element from an array
+        arr.push(6); // add to array from after the last element
+        arr.shift(); // removes the first element from an array
+        arr.unshift(0); // add to array from before the first element
+        let arr2 = [5,6,7,8,9];
+        arr.concat(arr2); // creates a new array by merging (concatenating) existing arrays
+        arr.flat() // Flattening is useful when you want to convert a multi-dimensional array into a one-dimensional array.
+        arr.splice(2,0,1,2); // can be used to add new items to an array , The first parameter defines the position where 
+        //new elements should be added , The second parameter (0) defines how many elements should be removed.
+        arr.slice(); // slices out a piece of an array into a new array
+
+        
+
+
+    </script>
+</body>
+</html>

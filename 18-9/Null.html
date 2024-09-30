@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Undefined : means that a variable or object has been declared but has not been assigned a value.
+        // It is the default value for variables that have not been initialized.
+
+        // Difference between null and undefined
+        typeof null; // "object" (not "null" for legacy reasons)
+        typeof undefined; // "undefined"
+        null === undefined; // false
+        null == undefined; // true
+        null === null; // true
+        null == null; // true
+        !null; // true
+        Number.isNaN(1 + null); // false
+        Number.isNaN(1 + undefined); // true
+    </script>
+</body>
+
+</html>

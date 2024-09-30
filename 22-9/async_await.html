@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // async
+        /*
+        async function getData(){
+            let users = []
+            if(users.length > 0){
+                return "users found"
+            }
+            else{
+                return ("No users found")
+            }
+        }
+
+        console.log(getData())
+        getData().then(
+            (resolve)=>console.log(resolve),
+            (reject)=>console.log(`rejected : ${reject}`)
+        )
+        */
+        
+
+        // await
+        const myPromise = new Promise ((res,rej)=>{
+            setTimeout(() => {
+                res("My promise result")
+            }, 3000)
+        })
+        async function readData(){
+            console.log("Before Promise")
+            //myPromise.then((resolve)=>console.log(resolve));
+            console.log(await myPromise.catch((err)=>err))
+            console.log("After Promise")
+        }
+        readData()
+    </script>
+</body>
+</html>

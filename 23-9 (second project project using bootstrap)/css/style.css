@@ -1,0 +1,21 @@
+.logo{
+width: 150px;
+}
+#main_nav{
+    box-shadow: 3px 4px 5px #04a0d8;
+    color:white;
+    z-index:2;
+}
+#li-item{
+    color: white;
+}
+.container{
+    width:99%;
+}
+.container > .card{
+    display: inline-block;
+    margin-top: 2%;
+    width: 33%;
+}
+
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loop</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>My Skills</h1>
+        <h2 v-for="(skill,i) in skills" :key="i">
+           <li>{{skill}}</li> 
+        </h2>
+        <h1>My Friends</h1>
+        <h2 v-for="(friend,id) in friends" :key="id">
+            <li>{{friend.name}}</li>
+        </h2>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="loop.js"></script>
+</body>
+</html>

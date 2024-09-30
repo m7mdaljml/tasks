@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Map return new Array
+
+        // 1 : return name with specific chars start with M
+        let names = ["Mohammad Aljamal","Rawdan Alali","Ali Abu Fakhedah","Jawad Aljamal","Mohammad Jaradat"];
+        let SpecificNames = names.filter(item => item.startsWith("M"));
+        console.log(SpecificNames);
+
+        // 2 : return names his length more than 15 chars
+        let longName = names.filter(item => item.length >= 15);
+        console.log(longName);
+    </script>
+</body>
+</html>

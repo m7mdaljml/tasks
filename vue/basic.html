@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Vue js</title>
+</head>
+<body>
+    <div id="main">
+        <h2>my name is {{ name }}</h2>
+        <h2>my name is {{ age }}</h2>
+        <h2>{{sayHello()}}</h2>
+        <h2>{{sayMyName("Welcome ",name)}}</h2>
+        <a :href="link" @click.prevent>test</a> <!--v-bind:--><!--@click.prevent disable reload action -->
+        <button @click.once="count()">increase age</button> <!-- v-on: --><!-- @click.once make it work once -->
+        <input type="text" @keyup.enter.esc="keyUp()">
+        <br>
+        <input @keyup="editName()" v-model="name" type="text" name="name" id="name"> <!-- v-model : Two Way Data Binding -->
+        <h2>{{name}}</h2>
+        <br>
+        <form action="" @submit.prevent="sendData()">
+            <label for="name">Enter your name</label>
+            <input type="text" name="name" v-model="name">
+            <label for="email">Enter your Email</label>
+            <input type="email" name="email" v-model="email">
+            <label for="password">Enter your Password</label>
+            <input type="password" name="password" v-model="password">
+            <input type="submit" value="submit">
+        </form>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="basic.js"></script>
+</body>
+</html>

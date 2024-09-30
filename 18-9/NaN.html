@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NaN</title>
+</head>
+
+<body>
+    <script>
+        // NaN :
+
+        // In JavaScript, NaN (Not-a-Number) is a special value that represents an undefined or unrepresentable value
+        // in numerical computations. However, NaN is unique in that it is not equal to itself.
+        // This means that comparing anything to NaN using == or === will always return false
+
+        console.log(0 / 0); // NaN
+
+        console.log(Number("Hello")); // NaN
+
+        if (Number("hello") == NaN || (0 / 0) == NaN) {
+            console.log("Not a num"); // this will not execute
+        }
+        
+
+    </script>
+</body>
+
+</html>

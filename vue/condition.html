@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condition</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h3>my name is {{name}}</h3>
+        <h3>my age is {{age}}</h3>
+
+        <h3 v-if="age > 30">age is more then 23</h3>
+        <h3 v-else>age is less then 23</h3>
+        
+        <h3 v-show="age > 30">v-show age is more then 23</h3>
+        <h3 v-show="age <= 30">v-show age is less then 23</h3>
+
+        <button @click="age++">Increase age</button>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="condition.js"></script>
+</body>
+</html>

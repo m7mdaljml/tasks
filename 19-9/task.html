@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+    
+    const plans = [
+      { zone: "A103", engineer: "Bill" },
+      { zone: "B205", engineer: "Chad" },
+      { zone: "B205", engineer: "Bill" },
+      { zone: "A103", engineer: "Sue" },
+      { zone: "B205", engineer: "Sue" },
+      { zone: "C007", engineer: "Sue" }
+    ];
+    // Write a function to print the following output:
+    // zonesData =
+    // [
+    //   { zone: 'A103', engineers: [ 'Bill', 'Sue' ], count: 2 },
+    //   { zone: 'B205', engineers: [ 'Chad', 'Bill', 'Sue' ], count: 3 },
+    //   { zone: 'C007', engineers: [ 'Sue' ], count: 1 }
+    // ]
+            */
+           const plans = [
+           { zone: "A103", engineer: "Bill" },
+           { zone: "B205", engineer: "Chad" },
+            { zone: "B205", engineer: "Bill" },
+            { zone: "A103", engineer: "Sue" },
+            { zone: "B205", engineer: "Sue" },
+            { zone: "C007", engineer: "Sue" }
+        ];
+
+        /*
+        const zonesData = [];
+
+        let zones = [];
+        plans.forEach(item=>{
+            if(!zones.includes(item.zone)){
+                zones.push(item.zone);
+            }
+        });
+        zones.forEach(zonesItem=> {
+            let engs = [];
+            plans.forEach(item=> {
+                if(item.zone == zonesItem){
+                    engs.push(item.engineer)
+                }
+            })
+            zonesData.push({ zone: zonesItem, engineers: engs, count: engs.length });
+        });
+        console.log(zonesData);
+        */
+
+        const zonesData = [];
+            plans.forEach(item => {
+                
+
+                let zoneObj = zonesData.find(find => find.zone == item.zone);
+
+                if (zoneObj) {
+                    zoneObj.engineers.push(item.engineer);
+                    zoneObj.count++;
+                }
+                else{
+                    zonesData.push({ zone: item.zone, engineers: [], count: 0 });
+                }
+            });
+
+            console.log(zonesData);
+
+
+
+    </script>
+</body>
+
+</html>

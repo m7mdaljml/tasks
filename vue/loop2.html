@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loop</title>
+    <style>
+        .container {
+            display:flex;
+            width: 100%;
+        }
+        .palyer{
+            width: 30%;
+            padding: 50px;
+            justify-content: space-around;
+        }
+        span{
+            padding: 50px;
+            margin-top: 10px;
+        }
+        .player > img {
+            width:100px;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+       <div class="container">
+        <div v-for="(player,id) in players" :key="id" class="player">
+            <span>{{player.name}}</span><br>
+            <img :src="player.img" alt=""><br>
+            <span>{{player.position}}</span><br>
+            <span>{{player.foot}}</span><br>
+        </div>
+       </div>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="loop2.js"></script>
+</body>
+</html>

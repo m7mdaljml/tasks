@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const orders = [
+  {
+    id: 1,
+    customerId: 101,
+    items: [
+      { itemName: "Laptop", quantity: 1, price: 1200 },
+      { itemName: "Mouse", quantity: 2, price: 25 }
+    ],
+    delivered : true
+  },
+  {
+    id: 2,
+    customerId: 102,
+    items: [
+      { itemName: "Keyboard", quantity: 1, price: 100 },
+      { itemName: "Monitor", quantity: 2, price: 300 }
+    ],
+    delivered : false
+  },
+  {
+    id: 3,
+    customerId: 103,
+    items: [
+      { itemName: "Tablet", quantity: 1, price: 500 }
+    ],
+    delivered : true
+  }
+];
+
+// add total price for every order 
+function addTotalPrice(orders){
+    orders.forEach(order=>{
+        order.TotalPrice = order.items.reduce((acc,curr)=>{
+            return acc + (curr.quantity * curr.price);
+        },0);
+    });
+}
+
+// has all orders dilevered ?
+function AllDel(orders){
+    let arr = orders.map(order=>order.delivered);
+    let result = arr.find(item=> item === false);
+    return !result ? "Not all orders are delivered" : "Yes ! all orders are deliverd";
+}
+
+// return the count of users thar has total ptive more than 1000
+function moreThan(orders){
+  orders.reduce((acc,curr)=>{
+    if(curr.TotalPrice >= 1000){
+      acc+=1;
+    }
+    return acc
+  },0)
+}
+
+addTotalPrice(orders);
+console.log(orders);
+console.log(AllDel(orders));
+console.log(moreThan(orders));
+
+
+    </script>
+</body>
+</html>

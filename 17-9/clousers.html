@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function one (){
+            let one = 1;
+            return function two(){
+                let two = 2;
+                return function three(){
+                    let three = 3;
+                    console.log(one + two + three);
+                }
+            }
+        }
+
+        let oone = one();
+        let ttwo = oone();
+        ttwo(); // Result is 6
+        
+    </script>
+</body>
+</html>

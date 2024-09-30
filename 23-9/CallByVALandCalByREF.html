@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj = {a:1, b:{c:2}}
+        let x = {...obj}
+        x.a = 2
+        console.log(obj.a) //Result : 1
+        x.b.c = 3
+        console.log(obj.b.c) // Result : 3
+
+        const date = new Date('2024-09-23T02:03:00.000Z')
+        console.log(date) // Result : Mon Sep 23 2024 05:03:00 GMT+0300 (GMT+03:00)
+        console.log(date.toJSON()) // Result : 2024-09-23T02:03:00.000Z
+    </script>
+</body>
+</html>
